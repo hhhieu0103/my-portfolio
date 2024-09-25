@@ -1,0 +1,8 @@
+.background {
+    background-image: url('/assets/home-bg-blur-50-bright-50.jpg');
+    background-size: cover;
+}
+
+.text-bg {
+    background-color: rgba(0, 0, 0, 0.6);
+}

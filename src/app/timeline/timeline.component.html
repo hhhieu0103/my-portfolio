@@ -1,0 +1,36 @@
+@for (e of events; track $index; let isLast = $last) {
+<div class="row mb-3 mb-xl-4">
+    <div class="col-auto d-none d-sm-flex align-items-center">
+        <div class="d-flex justify-content-center align-items-center border border-white rounded-circle circle"
+            [class.bg-primary]="e.isCurrent">
+            @if (e.type == type.Education) {
+            <i class='bi bi-backpack fs-1'></i>
+            } @else {
+            <i class='bi bi-building fs-1'></i>
+            }
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="d-flex flex-column ms-lg-3">
+            <h5 class="mb-0" [class.text-info]="e.isCurrent">{{e.organization}}
+                @if (e.badges) {
+                @for (badge of e.badges; track $index; let isFirst = $first) {
+                <span class="badge" [class]="badge.colorClass" [class.ms-2]="!isFirst">{{badge.text}}
+                </span>
+                }
+                }
+            </h5>
+            <p class="mb-0"><em>{{e.title}}</em></p>
+            <p class="mb-0">{{e.location}}</p>
+            <p class="mb-0">{{e.time}}</p>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- @if (!isLast) {
+<div class="d-none d-lg-block border-start border-white line"></div>
+} -->
+}

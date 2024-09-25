@@ -1,0 +1,31 @@
+<div class="container-fluid py-3 h-100">
+    <div class="row align-content-start align-content-md-center justify-content-md-center align-items-center h-100">
+        <div class="col-auto col-md-6 col-lg-5 col-xl-3 mb-3 mb-md-0">
+            <img src="/assets/avatar.jpeg" class="border rounded img-fluid" />
+        </div>
+        <div class="col-auto">
+            <div class="d-flex align-items-baseline">
+                <h1 class="display-3">Hieu Ho</h1>
+                <button class="btn btn-dark ms-2" (click)="playSound()" placement="top" ngbTooltip="How to pronounce my name.">
+                    <i class="bi bi-volume-up h2"></i>
+                </button>
+            </div>
+
+            <div class="d-flex">
+                <p><i class="bi bi-cake"></i> 03/01/2000</p>
+                <p><i class="ms-2 bi bi-gender-ambiguous"></i> he/him</p>
+            </div>
+            <p><i class="bi bi-translate"></i>
+                <span class="ms-2 badge text-bg-primary">English</span>
+                <span class="ms-2 badge text-bg-success">Vietnamese</span>
+            </p>
+            <p><i class="bi bi-envelope-at"></i> hoanghieu010300&#64;gmail.com</p>
+            <p><i class="bi bi-telephone"></i> (774) 263-5934</p>
+            <p><i class="bi bi-geo-alt"></i> North Dartmouth, Massachusetts, USA</p>
+            <button class="btn btn-dark border-white" (click)="urlService.openInNewTab(githubURL)"><i class="bi bi-github">
+                    Github</i></button>
+            <button class="btn btn-dark border-white ms-2" (click)="urlService.openInNewTab(igURL)"><i class="bi bi-instagram">
+                    Instagram</i></button>
+        </div>
+    </div>
+</div>

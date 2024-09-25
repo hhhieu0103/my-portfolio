@@ -1,0 +1,8 @@
+.bi::before {
+    vertical-align: 0 !important;
+}
+
+.line {
+    height: 50px;
+    margin-left: 50px;
+}

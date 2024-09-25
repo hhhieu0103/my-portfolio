@@ -1,0 +1,48 @@
+<div class="d-flex justify-content-center align-items-center h-100 px-3 py-2">
+  <div class="row justify-content-evenly">
+    <div class="col-12 col-lg-6 col-xl-auto">
+      <h2 class="mb-3">Education and Experience</h2>
+      <app-timeline [events]="eduAndExp"></app-timeline>
+
+    </div>
+
+    <div class="col col-xl-5 d-flex flex-column">
+
+      <div class="row flex-grow-1">
+        <div class="col">
+          <h2 class="mb-3">Skills</h2>
+          <p><span class="fw-bold">Angular</span>, NodeJS, ExpressJS, <span class="fw-bold">Bootstrap</span>, <span
+              class="fw-bold">Web Development</span>, Frontend Development, Backend Development,
+            Responsive Web Design, Java, Python, C, Javascript, <span class="fw-bold">Database</span>, <span
+              class="fw-bold">SQL</span>, Cyber Security, <span class="fw-bold">Algorithms</span>, OOP, Github</p>
+        </div>
+      </div>
+
+      <div class="row flex-grow-1">
+        <div class="col">
+          <h2 class="mb-3">Hobbies</h2>
+          <div class="row">
+            @for (hobby of hobbies; track $index) {
+            <div class="col">
+              <div class="d-flex flex-column align-items-center">
+                <div class="d-flex justify-content-center align-items-center border rounded-circle circle mb-2">
+                  <i class="fs-1" [class]="hobby.icon"></i>
+                </div>
+                <p class="text-center">{{hobby.name}}</p>
+              </div>
+            </div>
+            }
+          </div>
+        </div>
+      </div>
+
+      <div class="row flex-grow-1 justify-content-center align-items-center mt-4">
+        <div class="col-auto">
+          <button class="btn btn-primary"><i class="bi bi-download"></i> Download my resume</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
